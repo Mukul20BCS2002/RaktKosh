@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/RaktKosh</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Mukul@2002</property>
+
+        
+
+        <!-- Specify dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="format_sql">true</property>
+
+        <!-- Mention annotated class -->
+        <mapping class="com.entity.AdminBank"/>
+        <mapping class="com.entity.Donor"/>
+        <mapping class="com.entity.ThalassemiaPatientRegister"/>
+        <mapping class="com.entity.ThalassemiaRequest"/>
+        <mapping class="com.entity.DonorRepository"/>
+    </session-factory>
+</hibernate-configuration>
+	
